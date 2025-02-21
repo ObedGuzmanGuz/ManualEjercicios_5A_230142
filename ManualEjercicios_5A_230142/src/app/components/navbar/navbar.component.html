@@ -1,0 +1,23 @@
+<mat-toolbar color="primary" class="sticky-toolbar">
+  <span class="spacer"></span>
+  <h1>230142</h1>
+
+  <nav class="center-nav">
+    <button mat-button> Ejercicios</button>
+    <button mat-button> Tareas</button>
+    <button mat-button> Examen Prácticos</button>
+    <button mat-button> Acerca de</button>
+  </nav>
+
+  <span class="spacer"></span>
+
+  <button mat-icon-button [matMenuTriggerFor]="menu" class="menu-button">
+    <img class="user-avatar" alt="" src="assets/image.png">
+  </button>
+
+  <!-- Menú desplegable -->
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>Perfil</button>
+    <button mat-menu-item>Cerrar sesión</button>
+  </mat-menu>
+</mat-toolbar>

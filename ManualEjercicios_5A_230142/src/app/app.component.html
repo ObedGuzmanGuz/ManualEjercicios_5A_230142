@@ -1,16 +1,14 @@
-<app-navbar></app-navbar>
-
-
-<h1 class="text-3xl font-bold underline text-center">
-
-Angular v19.1 + <span class="text-indigo-600"> Tailwindcss</span>
-
-</h1>
-
-<div class="flex justify-center">
-  <button mat-raised-button  color="primary"  > Click ME</button>
-
-
-
-  </div>
+<div class="page-container">
+  <app-navbar></app-navbar>
   
+  <div class="content-wrapper">
+    <app-sidebar></app-sidebar>
+    <div class="content-area">
+      <!-- Breadcrumb agregado aquí -->
+      <app-breadcrumb></app-breadcrumb>
+      
+      <app-page-content></app-page-content>
+      <app-footer></app-footer>
+    </div>
+  </div>
+</div>

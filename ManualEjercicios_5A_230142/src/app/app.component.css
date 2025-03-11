@@ -71,3 +71,8 @@ html, body {
   display: inline-block;
 }
 
+.footer {
+  position: relative; /* o fixed si se desea */
+  bottom: 0;
+  width: 100%;
+}

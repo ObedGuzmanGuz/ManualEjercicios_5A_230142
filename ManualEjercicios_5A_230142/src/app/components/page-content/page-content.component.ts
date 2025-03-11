@@ -15,5 +15,7 @@ export class PageContentComponent {
 
   logout() {
     // Implementa la lógica de cierre de sesión aquí, como limpiar la sesión, redirigir a la página de login, etc.
+    this.authService.logout(); // Asegúrate de que el servicio limpie el estado
+    window.location.reload();
   }
 }

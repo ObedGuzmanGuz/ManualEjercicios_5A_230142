@@ -1,9 +1,9 @@
 import { Routes } from '@angular/router';
+import { NgModule } from '@angular/core';
 import { PageContentComponent } from './components/page-content/page-content.component';
-import { Ejercicio01Component } from './components/ejercicio01/ejercicio01.component';
-
+import { Ejercicio01Component } from './ejercicio01/ejercicio01.component';
 export const routes: Routes = [
-  { path: '', component: PageContentComponent }, // Página principal
-  { path: 'ejercicio01', component: Ejercicio01Component }, // Ruta para Ejercicio 01
-  { path: '**', redirectTo: '', pathMatch: 'full' } // Redirige rutas desconocidas al inicio
+  { path: '', component: PageContentComponent, pathMatch: 'full' },
+  { path: 'ejercicio1', component: Ejercicio01Component },
+  { path: '**', redirectTo: '' }
 ];

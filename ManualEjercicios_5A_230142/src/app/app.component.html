@@ -1,14 +1,16 @@
 <div class="page-container">
-  <app-navbar></app-navbar>
+  
+  <app-navbar *ngIf="authService.isLoggedIn"></app-navbar>
   
   <div class="content-wrapper">
-    <app-sidebar></app-sidebar>
+    <app-sidebar *ngIf="authService.isLoggedIn"></app-sidebar>
     <div class="content-area">
-      <!-- Breadcrumb agregado aquí -->
-      <app-breadcrumb></app-breadcrumb>
-      
+      <app-breadcrumb *ngIf="authService.isLoggedIn"></app-breadcrumb>
+
       <app-page-content></app-page-content>
       <app-footer></app-footer>
+      <router-outlet></router-outlet>
+
     </div>
   </div>
 </div>

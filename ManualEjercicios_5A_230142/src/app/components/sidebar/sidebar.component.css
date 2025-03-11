@@ -1,4 +1,12 @@
-*{
-    background-color: red;
+/* *{
+    background-color: rgb(0, 0, 0);
     padding: 10 px;
+} */
+.hidden {
+    display: none;
+}
+
+.rotate-180 {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
 }

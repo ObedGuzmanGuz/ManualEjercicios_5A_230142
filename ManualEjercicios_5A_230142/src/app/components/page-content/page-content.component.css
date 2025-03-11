@@ -1,0 +1,39 @@
+.sticky-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.center-nav {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.menu-button {
+    margin-left: auto;
+}
+
+.spacer {
+    flex-grow: 1;
+}
+
+.page-content-container {
+    min-height: 400px;
+    position: relative;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.login-container p {
+    margin-bottom: 20px; /* Espacio entre el párrafo y el botón */
+}

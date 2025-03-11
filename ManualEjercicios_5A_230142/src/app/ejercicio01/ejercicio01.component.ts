@@ -2,10 +2,9 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-ejercicio01',
-  imports: [],
   templateUrl: './ejercicio01.component.html',
-  styleUrl: './ejercicio01.component.css'
+  styleUrls: ['./ejercicio01.component.css']
 })
 export class Ejercicio01Component {
-
+  // Aquí puedes agregar cualquier lógica de tu componente si es necesario
 }

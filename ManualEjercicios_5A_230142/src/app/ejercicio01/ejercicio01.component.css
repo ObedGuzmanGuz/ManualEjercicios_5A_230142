@@ -1,0 +1,17 @@
+/* Contenedor principal que envuelve el contenido */
+.container {
+    display: flex;
+    justify-content: center;  /* Centra horizontalmente */
+    align-items: center;      /* Centra verticalmente */
+    height: 100vh;            /* Asegura que el contenedor ocupe el 100% de la altura de la pantalla */
+    padding: 20px;            /* Aplica un padding alrededor del contenido */
+    box-sizing: border-box;   /* Asegura que el padding no afecte el tamaño del contenedor */
+    text-align: center;       /* Centra el texto dentro del contenedor */
+  }
+  
+  /* Estilo del mensaje */
+  p {
+    color: #a144eb;
+    font-size: 2rem; /* Puedes ajustar el tamaño de la fuente como desees */
+  }
+  

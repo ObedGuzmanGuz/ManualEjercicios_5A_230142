@@ -1,62 +1,59 @@
 html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    box-sizing: border-box;
-  }
-  
-  .page-container {
-    display: flex;
-    flex-direction: column;
-    height: 100vh; /* Ocupa toda la ventana */
-    width: 100%;
-  }
-  
-  /* El navbar se mantiene en la parte superior */
-  .page-container app-navbar {
-    flex: 0 0 auto;
-  }
-  
-  /* El contenedor central se expande para ocupar el espacio restante */
-  .content-wrapper {
-    flex: 1;
-    display: flex;
-  }
-  
-  /* Sidebar a la izquierda */
-  .content-wrapper app-sidebar {
-    flex: 0 0 15%;
-    display: block;      
-    height: 100%;        
-    background-color: rgba(0, 0, 0, 0.904);
-  }
-  
-  /* Contenedor para el contenido principal y el footer */
-  .content-area {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  /* Contenido principal arriba */
-  .content-area app-page-content {
-    flex: 1;
-    background-color: rgb(255, 255, 255);
-    padding: 10px;
-  }
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  box-sizing: border-box;
+}
 
-  .content-area app-footer {
-    flex: 0 0 auto;
-   
-  }
+.page-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Ocupa toda la ventana */
+  width: 100%;
+}
+
+.page-container app-navbar {
+  flex: 0 0 auto; /* El navbar se mantiene fijo en la parte superior */
+}
+
+.content-wrapper {
+  flex: 1;
+  display: flex;
+}
+
+.content-wrapper app-sidebar {
+  flex: 0 0 15%;
+  display: block;      
+  height: 100%;        
+  background-color: rgba(0, 0, 0, 0.904);
+}
+
+.content-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%; /* Esto garantiza que el footer se mantenga al final */
+}
+
+.content-area app-page-content {
+  flex: 1;
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+}
+
+.content-area app-footer {
+  flex: 0 0 auto;
+  margin-top: auto; /* Esto asegura que el footer siempre quede al final */
+}
 
 .content-area app-breadcrumb {
-    padding: 10px;
-    background-color: #f2f2f2;
-    border-bottom: 1px solid #ccc;
-    background-color:  rgb(102, 255, 0);;
-  }
-  
+  padding: 10px;
+  background-color: #f2f2f2;
+  border-bottom: 1px solid #ccc;
+  background-color: rgb(102, 255, 0);
+}
+
+/* Estilo del botón de login/logout */
 .login-button, .logout-button {
   padding: 12px 24px;
   font-size: 18px;
@@ -71,8 +68,9 @@ html, body {
   display: inline-block;
 }
 
+/* Asegurarse de que el footer se quede al fondo */
 .footer {
-  position: relative; /* o fixed si se desea */
+  position: relative;
   bottom: 0;
   width: 100%;
 }

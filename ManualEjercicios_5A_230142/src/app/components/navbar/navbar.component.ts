@@ -1,7 +1,7 @@
 import { Component, AfterViewInit, Inject, PLATFORM_ID, Renderer2 } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { AuthService } from '../../auth.service';
-import { Router } from '@angular/router';  
+import { Router } from '@angular/router';
 import { RouterModule } from '@angular/router'; // 🔹 Importa RouterModule
 
 @Component({
@@ -26,7 +26,9 @@ export class NavbarComponent implements AfterViewInit {
   }
 
   logout() {
-    this.authService.logout();
+    // Llama al método de logout del AuthService y redirige al login
+    this.authService.logout();  // Se asume que este método elimina el token o estado de autenticación
+    this.router.navigate(['/login']); // Redirige a la página de login
   }
 
   // Navegación a Ejercicio 1

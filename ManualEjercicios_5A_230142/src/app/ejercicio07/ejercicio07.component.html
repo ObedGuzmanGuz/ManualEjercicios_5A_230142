@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="card">
+      <h2>Ejercicio 07</h2>
+      
+      <section 
+        class="hover-box"
+        (mouseover)="onMouseOver()" 
+        (mouseout)="onMouseOut()"> 
+      Pasa el puntero para activar el mensaje
+        <span class="message" [class.visible]="message">
+          {{ message }} 
+        </span>
+      </section>
+    
+    </div>
+  </div>
+  

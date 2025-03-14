@@ -1,0 +1,51 @@
+/* Contenedor principal */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    background-color: #f4f4f4;
+    padding-top: 50px;
+}
+
+/* Tarjeta de contenido */
+.card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Estilo del título */
+h2 {
+    color: #4a90e2;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+/* Caja interactiva con hover */
+.hover-box {
+    font-size: 1.2rem;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.hover-box:hover {
+    background-color: #e0e0e0;
+}
+
+/* Mensaje oculto inicialmente */
+.message {
+    display: block;
+    font-weight: bold;
+    color: #28a745;
+    margin-top: 10px;
+    visibility: hidden; /* Se oculta sin usar *ngIf */
+}

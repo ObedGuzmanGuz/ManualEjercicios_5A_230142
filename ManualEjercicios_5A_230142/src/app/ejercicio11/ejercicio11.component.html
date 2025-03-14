@@ -1,0 +1,25 @@
+<div>
+    <h2>Ejercicio 11</h2>
+    
+    <!-- Información del usuario -->
+    <p>Nombre: {{ username }}</p>
+    
+  
+    <ul>
+      <li>
+        Imagen estatica:
+        <div class="image-container">
+          <!-- Imagen estática -->
+          <img src="/assets/tigrilloo.png" alt="Angular logo" width="300" height="300" />
+        </div>
+      </li>
+      <li>
+        Imagen Dinamica:
+        <div class="image-container">
+          <!-- Imagen dinámica -->
+          <img [src]="logoUrl" [alt]="logoAlt" width="300" height="300" />
+        </div>
+      </li>
+    </ul>
+  </div>
+  

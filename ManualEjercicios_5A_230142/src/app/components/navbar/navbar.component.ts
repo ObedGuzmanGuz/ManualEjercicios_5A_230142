@@ -35,6 +35,40 @@ export class NavbarComponent implements AfterViewInit {
   navigateToEjercicio1() {
     this.router.navigate(['/ejercicio1']);
   }
+  navigateToEjercicio2() {
+    this.router.navigate(['/ejercicio2']);
+  }
+  navigateToEjercicio3() {
+    this.router.navigate(['/ejercicio3']);
+  }
+  navigateToEjercicio4() {
+    this.router.navigate(['/ejercicio4']);
+  }
+  navigateToEjercicio5() {
+    this.router.navigate(['/ejercicio5']);
+  }
+  navigateToEjercicio6() {
+    this.router.navigate(['/ejercicio6']);
+  }
+  navigateToEjercicio7() {
+    this.router.navigate(['/ejercicio7']);
+  }
+  navigateToEjercicio8() {
+    this.router.navigate(['/ejercicio8']);
+  }
+  navigateToEjercicio9() {
+    this.router.navigate(['/ejercicio9']);
+  }
+  navigateToEjercicio10() {
+    this.router.navigate(['/ejercicio10']);
+  }
+  navigateToEjercicio11() {
+    this.router.navigate(['/ejercicio11']);  // 🔹 Corregido
+  }
+  navigateToEjercicio12() {
+    this.router.navigate(['/ejercicio12']);
+  }
+  
 
   // Función para inicializar el comportamiento de los dropdowns
   initNavbar() {

@@ -1,0 +1,60 @@
+/* Para ocultar elementos */
+.hidden {
+    display: none;
+  }
+  
+  /* Estilos adicionales */
+  h1 {
+    color: #4a90e2;
+  }
+  
+  article {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  
+  p {
+    margin-bottom: 20px;
+  }
+  
+  button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Estilos para la carga */
+  .loading-message {
+    color: gray;
+    font-style: italic;
+  }
+  
+  /* Estilos para el placeholder */
+  .placeholder {
+    font-size: 1rem;
+    color: #ccc;
+  }
+  
+  .comments-container {
+    margin-top: 20px;
+    padding: 10px;
+    background: #f7f7f7;
+    border-radius: 5px;
+  }
+  
+  ul {
+    list-style-type: none;
+  }
+  
+  li {
+    padding: 5px 0;
+  }
+  

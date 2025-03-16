@@ -1,0 +1,33 @@
+<div class="page-content-container">
+  <!-- Buscador y selector de elementos por página -->
+  <div class="controls">
+    <input type="text" [(ngModel)]="searchTerm" (input)="applySearch()" placeholder="Buscar..." class="search-input" />
+    <label for="itemsPerPage" class="items-per-page-label">Mostrar:</label>
+    <select id="itemsPerPage" [(ngModel)]="itemsPerPage" (change)="updatePagination()" class="items-per-page-select">
+      <option *ngFor="let option of lengthMenu" [value]="option">{{ option }}</option>
+    </select>
+  </div>
+
+  <!-- Tabla -->
+  <div class="table-responsive">
+    <table border="1" class="data-table">
+      <thead>
+        <tr>
+          <th *ngFor="let key of keys">{{ key }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let row of paginatedData">
+          <td *ngFor="let key of keys">{{ row[key] }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Paginación -->
+  <div class="pagination">
+    <button (click)="prevPage()" [disabled]="page === 1" class="pagination-button">Anterior</button>
+    <span class="pagination-info">Página {{ page }} de {{ totalPages }}</span>
+    <button (click)="nextPage()" [disabled]="page === totalPages" class="pagination-button">Siguiente</button>
+  </div>
+</div>

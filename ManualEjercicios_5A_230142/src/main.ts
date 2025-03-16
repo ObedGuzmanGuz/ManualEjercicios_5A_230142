@@ -6,12 +6,14 @@ import { provideAnimations } from '@angular/platform-browser/animations';
 import 'flowbite';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { routes } from './app/app.routes'; // Importar las rutas
+import { provideHttpClient, withFetch } from '@angular/common/http'; // Proveedor con fetch
 
 bootstrapApplication(AppComponent, {
   providers: [
     provideAnimations(),
     provideAnimationsAsync(),
-    provideRouter(routes) // Agregar la configuración del enrutador aquí
+    provideRouter(routes), // Configuración del enrutador
+    provideHttpClient(withFetch()) // Usa fetch en HttpClient
   ]
 })
 .catch(err => console.error(err));

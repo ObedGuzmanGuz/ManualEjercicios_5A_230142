@@ -9,10 +9,18 @@ import { PageContentComponent } from './components/page-content/page-content.com
 import { FooterComponent } from './components/footer/footer.component';
 import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.component';
 
-@Component({
+
+import { BasicDatatableComponent } from './basic-datatable/basic-datatable.component';
+import { OptionsDatatableComponent } from './options-datatable/options-datatable.component';
+import { JsonDatatableComponent } from './json-datatable/json-datatable.component';
+ import { AjaxDatatableComponent } from './ajax-datatable/ajax-datatable.component';
+
+
+ @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
+
     CommonModule,
     RouterModule,  // Agregar RouterModule aquí
     RouterOutlet,
@@ -20,13 +28,14 @@ import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.componen
     SidebarComponent,
     PageContentComponent,
     FooterComponent,
-    BreadcrumbComponent
+    BreadcrumbComponent,
+    BasicDatatableComponent,OptionsDatatableComponent,
+    JsonDatatableComponent,AjaxDatatableComponent
+    
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   constructor(public authService: AuthService) {}
-
-  title = 'ManualEjercicios_5A_230142';
 }

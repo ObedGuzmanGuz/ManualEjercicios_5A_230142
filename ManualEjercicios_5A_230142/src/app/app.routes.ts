@@ -13,7 +13,10 @@ import { Ejercicio09Component } from './ejercicio09/ejercicio09.component';
 import { Ejercicio10Component } from './ejercicio10/ejercicio10.component';
 import { Ejercicio11Component } from './ejercicio11/ejercicio11.component';
 import { Ejercicio12Component } from './ejercicio12/ejercicio12.component';
-
+import { BasicDatatableComponent } from './basic-datatable/basic-datatable.component';
+import { OptionsDatatableComponent } from './options-datatable/options-datatable.component';
+import { JsonDatatableComponent } from './json-datatable/json-datatable.component';
+import { AjaxDatatableComponent } from './ajax-datatable/ajax-datatable.component';
 export const routes: Routes = [
   { path: '', component: PageContentComponent, pathMatch: 'full' },
   { path: 'ejercicio1', component: Ejercicio01Component },
@@ -28,6 +31,10 @@ export const routes: Routes = [
   { path: 'ejercicio10', component: Ejercicio10Component },
   { path: 'ejercicio11', component: Ejercicio11Component },
   { path: 'ejercicio12', component: Ejercicio12Component },
+  { path: 'tareas', component: BasicDatatableComponent },
+  { path: 'tareas2', component: OptionsDatatableComponent },
+  { path: 'tareas3', component: JsonDatatableComponent },
+  { path: 'tareas4', component: AjaxDatatableComponent },
   
   { path: '**', redirectTo: '' }
 ];

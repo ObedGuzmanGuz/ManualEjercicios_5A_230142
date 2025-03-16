@@ -5,8 +5,8 @@
     <app-sidebar *ngIf="authService.isLoggedIn"></app-sidebar>
     
     <div class="content-area">
-      <app-breadcrumb *ngIf="authService.isLoggedIn"></app-breadcrumb>
-      
+      <!-- <app-breadcrumb *ngIf="authService.isLoggedIn"></app-breadcrumb>
+       -->
       <!-- Aquí se muestra el contenido dinámico de las rutas -->
       <div class="page-content">
         <router-outlet></router-outlet>

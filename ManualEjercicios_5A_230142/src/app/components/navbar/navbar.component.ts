@@ -12,6 +12,7 @@ import { RouterModule } from '@angular/router'; // 🔹 Importa RouterModule
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements AfterViewInit {
+  
   constructor(
     private authService: AuthService,
     @Inject(PLATFORM_ID) private platformId: object,

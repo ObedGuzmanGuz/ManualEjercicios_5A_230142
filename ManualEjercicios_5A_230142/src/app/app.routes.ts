@@ -17,6 +17,10 @@ import { BasicDatatableComponent } from './basic-datatable/basic-datatable.compo
 import { OptionsDatatableComponent } from './options-datatable/options-datatable.component';
 import { JsonDatatableComponent } from './json-datatable/json-datatable.component';
 import { AjaxDatatableComponent } from './ajax-datatable/ajax-datatable.component';
+import { BasicDatagraphComponent } from './basic-datagraph/basic-datagraph.component';
+import { OptionsDatagraphComponent } from './options-datagraph/options-datagraph.component';
+import { JsonDatagraphComponent } from './json-datagraph/json-datagraph.component';
+import { AjaxDatagraphComponent } from './ajax-datagraph/ajax-datagraph.component';
 export const routes: Routes = [
   { path: '', component: PageContentComponent, pathMatch: 'full' },
   { path: 'ejercicio1', component: Ejercicio01Component },
@@ -35,6 +39,11 @@ export const routes: Routes = [
   { path: 'tareas2', component: OptionsDatatableComponent },
   { path: 'tareas3', component: JsonDatatableComponent },
   { path: 'tareas4', component: AjaxDatatableComponent },
+  { path: 'tareas5', component: BasicDatagraphComponent },
+  { path: 'tareas6', component: OptionsDatagraphComponent },
+  { path: 'tareas7', component: JsonDatagraphComponent },
+  { path: 'tareas8', component: AjaxDatagraphComponent },
+  
   
   { path: '**', redirectTo: '' }
 ];

@@ -1,30 +1,31 @@
-import { Component } from '@angular/core';
+// src/app/components/sidebar/sidebar.component.ts
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { EjercicioService, Ejercicio } from '../../services/ejercicio.service';
+import { Subscription } from 'rxjs';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-sidebar',
+  standalone: true,
+  imports: [CommonModule], // Agrega esto
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.css']
 })
-export class SidebarComponent {
+export class SidebarComponent implements OnInit, OnDestroy {
+  ejercicioActual: Ejercicio | null = null;
+  private subscription!: Subscription;
 
-  toggleAccordion(index: number) {
-    const content = document.getElementById(`content-${index}`);
-    const icon = document.getElementById(`icon-${index}`);
+  constructor(private ejercicioService: EjercicioService) {}
 
-    if (!content || !icon) return;
+  ngOnInit() {
+    this.subscription = this.ejercicioService.ejercicio$.subscribe(
+      (ejercicio) => {
+        this.ejercicioActual = ejercicio;
+      }
+    );
+  }
 
-    if (content.classList.contains("hidden")) {
-      // Cerrar otros acordeones
-      document.querySelectorAll('[id^="content-"]').forEach(el => el.classList.add("hidden"));
-      document.querySelectorAll('[id^="icon-"]').forEach(el => el.classList.remove("rotate-180"));
-
-      // Mostrar el acordeón seleccionado
-      content.classList.remove("hidden");
-      icon.classList.add("rotate-180");
-    } else {
-      // Ocultar el acordeón si ya está abierto
-      content.classList.add("hidden");
-      icon.classList.remove("rotate-180");
-    }
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
   }
 }

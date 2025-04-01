@@ -21,29 +21,117 @@ import { BasicDatagraphComponent } from './basic-datagraph/basic-datagraph.compo
 import { OptionsDatagraphComponent } from './options-datagraph/options-datagraph.component';
 import { JsonDatagraphComponent } from './json-datagraph/json-datagraph.component';
 import { AjaxDatagraphComponent } from './ajax-datagraph/ajax-datagraph.component';
+
 export const routes: Routes = [
-  { path: '', component: PageContentComponent, pathMatch: 'full' },
-  { path: 'ejercicio1', component: Ejercicio01Component },
-  { path: 'ejercicio2', component: Ejercicio02Component },
-  { path: 'ejercicio3', component: Ejercicio03Component },
-  { path: 'ejercicio4', component: Ejercicio04Component },
-  { path: 'ejercicio5', component: Ejercicio05Component },
-  { path: 'ejercicio6', component: Ejercicio06Component },
-  { path: 'ejercicio7', component: Ejercicio07Component },
-  { path: 'ejercicio8', component: Ejercicio08Component },
-  { path: 'ejercicio9', component: Ejercicio09Component },
-  { path: 'ejercicio10', component: Ejercicio10Component },
-  { path: 'ejercicio11', component: Ejercicio11Component },
-  { path: 'ejercicio12', component: Ejercicio12Component },
-  { path: 'tareas', component: BasicDatatableComponent },
-  { path: 'tareas2', component: OptionsDatatableComponent },
-  { path: 'tareas3', component: JsonDatatableComponent },
-  { path: 'tareas4', component: AjaxDatatableComponent },
-  { path: 'tareas5', component: BasicDatagraphComponent },
-  { path: 'tareas6', component: OptionsDatagraphComponent },
-  { path: 'tareas7', component: JsonDatagraphComponent },
-  { path: 'tareas8', component: AjaxDatagraphComponent },
-  
-  
-  { path: '**', redirectTo: '' }
+  { 
+    path: '', 
+    component: PageContentComponent, 
+    pathMatch: 'full',
+    data: { breadcrumb: 'Inicio' } 
+  },
+  { 
+    path: 'ejercicio1', 
+    component: Ejercicio01Component,
+    data: { breadcrumb: 'Components in Angular' } 
+  },
+  { 
+    path: 'ejercicio2', 
+    component: Ejercicio02Component,
+    data: { breadcrumb: 'Component Class' } 
+  },
+  { 
+    path: 'ejercicio3', 
+    component: Ejercicio03Component,
+    data: { breadcrumb: 'Composing Components' } 
+  },
+  { 
+    path: 'ejercicio4', 
+    component: Ejercicio04Component,
+    data: { breadcrumb: 'Control Flow @if' } 
+  },
+  { 
+    path: 'ejercicio5', 
+    component: Ejercicio05Component,
+    data: { breadcrumb: 'Control Flow @for' } 
+  },
+  { 
+    path: 'ejercicio6', 
+    component: Ejercicio06Component,
+    data: { breadcrumb: 'Property Binding' } 
+  },
+  { 
+    path: 'ejercicio7', 
+    component: Ejercicio07Component,
+    data: { breadcrumb: 'Event Handling' } 
+  },
+  { 
+    path: 'ejercicio8', 
+    component: Ejercicio08Component,
+    data: { breadcrumb: '@Input Communication' } 
+  },
+  { 
+    path: 'ejercicio9', 
+    component: Ejercicio09Component,
+    data: { breadcrumb: '@Output Communication' } 
+  },
+  { 
+    path: 'ejercicio10', 
+    component: Ejercicio10Component,
+    data: { breadcrumb: 'Deferrable Views' } 
+  },
+  { 
+    path: 'ejercicio11', 
+    component: Ejercicio11Component,
+    data: { breadcrumb: 'Image Optimization' } 
+  },
+  { 
+    path: 'ejercicio12', 
+    component: Ejercicio12Component,
+    data: { breadcrumb: 'Routing Overview' } 
+  },
+  { 
+    path: 'tareas', 
+    component: BasicDatatableComponent,
+    data: { breadcrumb: 'Tabla Básica' } 
+  },
+  { 
+    path: 'tareas2', 
+    component: OptionsDatatableComponent,
+    data: { breadcrumb: 'Tabla Options' } 
+  },
+  { 
+    path: 'tareas3', 
+    component: JsonDatatableComponent,
+    data: { breadcrumb: 'Tabla JSON' } 
+  },
+  { 
+    path: 'tareas4', 
+    component: AjaxDatatableComponent,
+    data: { breadcrumb: 'Tabla AJAX' } 
+  },
+  { 
+    path: 'tareas5', 
+    component: BasicDatagraphComponent,
+    data: { breadcrumb: 'Gráfica Básica' } 
+  },
+  { 
+    path: 'tareas6', 
+    component: OptionsDatagraphComponent,
+    data: { breadcrumb: 'Gráfica Options' } 
+  },
+  { 
+    path: 'tareas7', 
+    component: JsonDatagraphComponent,
+    data: { breadcrumb: 'Gráfica JSON' } 
+  },
+  { 
+    path: 'tareas8', 
+    component: AjaxDatagraphComponent,
+    data: { breadcrumb: 'Gráfica AJAX' } 
+  },
+  { 
+    path: '**', 
+    redirectTo: '',
+    data: { breadcrumb: 'Inicio' } 
+  }
 ];

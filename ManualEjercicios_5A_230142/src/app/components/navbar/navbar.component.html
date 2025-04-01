@@ -1,10 +1,10 @@
+<!-- src/app/components/navbar/navbar.component.html -->
 <nav class="navbar">
   <ul class="nav-list">
     <li class="nav-item dropdown">
-      
       <button class="dropbtn">Ejercicios</button>
       <div class="dropdown-content">
-        <!-- Usa (click) para llamar a la función navigateToEjercicio1 -->
+        <!-- Usa (click) para llamar a la función correspondiente -->
         <a (click)="navigateToEjercicio1()">Ejercicio 1</a>
         <a (click)="navigateToEjercicio2()">Ejercicio 2</a>
         <a (click)="navigateToEjercicio3()">Ejercicio 3</a>
@@ -15,32 +15,24 @@
         <a (click)="navigateToEjercicio8()">Ejercicio 8</a>
         <a (click)="navigateToEjercicio9()">Ejercicio 9</a>
         <a (click)="navigateToEjercicio10()">Ejercicio 10</a>
-        <a (click)="navigateToEjercicio11()">Ejercicio 11</a>  <!-- 🔹 Corregido -->
+        <a (click)="navigateToEjercicio11()">Ejercicio 11</a>
         <a (click)="navigateToEjercicio12()">Ejercicio 12</a>
-        
-
-
-
-
       </div>
     </li>
 
     <li class="nav-item dropdown">
       <button class="dropbtn">Tareas</button>
       <div class="dropdown-content">
-        <a [routerLink]="['/tareas']">Tabla 1</a> 
-        <a [routerLink]="['/tareas2']">Tabla 2</a> 
-        <a [routerLink]="['/tareas3']">Tabla 3</a> 
-        <a [routerLink]="['/tareas4']">Tabla 4</a>
-        <a [routerLink]="['/tareas5']">Grafica 1</a> 
-        <a [routerLink]="['/tareas6']">Grafica 2</a> 
-        <a [routerLink]="['/tareas7']">Grafica 3</a> 
-        <a [routerLink]="['/tareas8']">Grafica 4</a> 
-     
-      
+        <a [routerLink]="['/tareas']" (click)="navigateToTarea1()">Tabla 1</a> 
+        <a [routerLink]="['/tareas2']" (click)="navigateToTarea2()">Tabla 2</a> 
+        <a [routerLink]="['/tareas3']" (click)="navigateToTarea3()">Tabla 3</a> 
+        <a [routerLink]="['/tareas4']" (click)="navigateToTarea4()">Tabla 4</a>
+        <a [routerLink]="['/tareas5']" (click)="navigateToTarea5()">Grafica 1</a> 
+        <a [routerLink]="['/tareas6']" (click)="navigateToTarea6()">Grafica 2</a> 
+        <a [routerLink]="['/tareas7']" (click)="navigateToTarea7()">Grafica 3</a> 
+        <a [routerLink]="['/tareas8']" (click)="navigateToTarea8()">Grafica 4</a> 
       </div>
     </li>
-    
 
     <li class="nav-item dropdown">
       <button class="dropbtn">Examen Práctico</button>

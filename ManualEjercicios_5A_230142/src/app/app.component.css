@@ -13,7 +13,7 @@ html, body {
 }
 
 .page-container app-navbar {
-  flex: 0 0 auto; /* El navbar se mantiene fijo en la parte superior */
+  flex: 0 0 auto; 
 }
 
 .content-wrapper {
@@ -25,7 +25,7 @@ html, body {
   flex: 0 0 15%;
   display: block;      
   height: 100%;        
-  background-color: rgba(0, 0, 0, 0.904);
+  background-color:#1e293b;
 }
 
 .content-area {
@@ -47,10 +47,10 @@ html, body {
 }
 
 .content-area app-breadcrumb {
-  padding: 10px;
+  
   background-color: #f2f2f2;
   border-bottom: 1px solid #ccc;
-  background-color: rgb(102, 255, 0);
+  background-color: rgb(255, 255, 255);
 }
 
 /* Estilo del botón de login/logout */

@@ -1,1 +1,9 @@
-<p>breadcrumb </p>
+<!-- breadcrumb.component.html -->
+<nav class="breadcrumb">
+    <a *ngFor="let crumb of breadcrumbs.slice(0, -1)" 
+       [routerLink]="crumb.url"
+       class="breadcrumb-link">
+      {{ crumb.label }}
+    </a>
+    <span class="current-page">{{ breadcrumbs[breadcrumbs.length - 1]?.label }}</span>
+  </nav>

@@ -1,5 +1,5 @@
 <div class="page-content-container">
-  <!-- Buscador y selector de elementos por página -->
+
   <div class="controls">
     <input type="text" [(ngModel)]="searchTerm" (input)="applySearch()" placeholder="Buscar..." class="search-input" />
     <label for="itemsPerPage" class="items-per-page-label">Mostrar:</label>
@@ -8,7 +8,6 @@
     </select>
   </div>
 
-  <!-- Tabla -->
   <div class="table-responsive">
     <table border="1" class="data-table">
       <thead>

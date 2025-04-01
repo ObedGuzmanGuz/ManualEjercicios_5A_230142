@@ -1,5 +1,18 @@
-:host {
-    display: block;
-    width: 100%;
-  }
-  
+/* json-datagraph.component.css */
+.chart-container {
+  position: relative;
+  height: 80vh;  /* Aumenté de 70vh a 80vh */
+  width: 90%;    /* Aumenté el ancho */
+  max-width: 1000px; /* Aumenté el máximo ancho */
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Opcional: Ajustar el tamaño del canvas dentro del contenedor */
+#crimeChart {
+  width: 90% !important;
+  height: 100% !important;
+}

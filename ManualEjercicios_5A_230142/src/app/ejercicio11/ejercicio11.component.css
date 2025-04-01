@@ -1,0 +1,19 @@
+/* Centrar el contenedor principal */
+div {
+    text-align: center; /* Centra el contenido textual dentro del div */
+  }
+  
+  /* Contenedor de la imagen (centrado) */
+  .image-container {
+    display: flex;
+    justify-content: center; /* Alinea las imágenes horizontalmente */
+    align-items: center; /* Alinea las imágenes verticalmente */
+    margin-bottom: 20px; /* Espaciado debajo de cada imagen */
+  }
+  
+  /* Opcional: Estilos para las imágenes */
+  img {
+    border-radius: 8px;
+    object-fit: cover; /* Mantiene la imagen proporcional si es necesario */
+  }
+  

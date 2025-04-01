@@ -1,0 +1,76 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Ocupa toda la ventana */
+  width: 100%;
+}
+
+.page-container app-navbar {
+  flex: 0 0 auto; 
+}
+
+.content-wrapper {
+  flex: 1;
+  display: flex;
+}
+
+.content-wrapper app-sidebar {
+  flex: 0 0 15%;
+  display: block;      
+  height: 100%;        
+  background-color:#1e293b;
+}
+
+.content-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%; /* Esto garantiza que el footer se mantenga al final */
+}
+
+.content-area app-page-content {
+  flex: 1;
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+}
+
+.content-area app-footer {
+  flex: 0 0 auto;
+  margin-top: auto; /* Esto asegura que el footer siempre quede al final */
+}
+
+.content-area app-breadcrumb {
+  
+  background-color: #f2f2f2;
+  border-bottom: 1px solid #ccc;
+  background-color: rgb(255, 255, 255);
+}
+
+/* Estilo del botón de login/logout */
+.login-button, .logout-button {
+  padding: 12px 24px;
+  font-size: 18px;
+  color: #fff;
+  background-color: #ff0000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+}
+
+/* Asegurarse de que el footer se quede al fondo */
+.footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}

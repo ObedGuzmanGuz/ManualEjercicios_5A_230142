@@ -1,0 +1,137 @@
+/* ===== Contenedor principal ===== */
+.page-content-container {
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #f8f9fa;
+  overflow-y: auto; /* Permite scroll vertical si el contenido es muy largo */
+}
+
+/* ===== Contenedor del contenido ===== */
+.content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ===== Contenedor para la tabla con scroll horizontal y vertical ===== */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto; /* Permite scroll horizontal si la tabla es muy ancha */
+  max-height: 500px; /* Altura máxima para el contenedor de la tabla */
+  overflow-y: auto; /* Permite scroll vertical dentro de la tabla */
+  border: 1px solid #ccc; /* Borde para el contenedor */
+  border-radius: 6px; /* Bordes redondeados */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* ===== Estilos de la tabla ===== */
+table.display.table.table-bordered.table-striped {
+  width: 100%;
+  min-width: 1000px; /* Ancho mínimo para forzar el scroll horizontal */
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 0; /* Elimina el margen para que no haya espacios innecesarios */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+table.display.table.table-bordered.table-striped thead {
+  background: linear-gradient(to bottom, #fafafa, #eaeaea);
+  border-bottom: 2px solid #ccc;
+}
+
+table.display.table.table-bordered.table-striped thead th {
+  padding: 12px;
+  text-align: center;
+  color: #333;
+  font-weight: bold;
+  white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+}
+
+table.display.table.table-bordered.table-striped thead th small {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+table.display.table.table-bordered.table-striped tbody tr {
+  transition: background-color 0.2s ease-in-out;
+}
+
+table.display.table.table-bordered.table-striped tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+table.display.table.table-bordered.table-striped tbody tr:hover {
+  background-color: #f2f2f2;
+}
+
+table.display.table.table-bordered.table-striped tbody td {
+  padding: 12px;
+  border-bottom: 1px solid #ccc;
+  color: #555;
+  text-align: center;
+  white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+}
+
+/* ===== Controles de paginación ===== */
+.dataTables_wrapper {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.dataTables_wrapper .dataTables_info {
+  font-size: 14px;
+  color: #333;
+}
+
+.dataTables_wrapper .dataTables_paginate {
+  display: flex;
+  gap: 5px;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+  background-color: #007bff;
+  color: #fff;
+  border-color: #007bff;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled {
+  background-color: #eaeaea;
+  cursor: not-allowed;
+  color: #ccc;
+}
+
+/* ===== Opcional: Personalización de la scrollbar de la tabla ===== */
+.table-responsive::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+.table-responsive::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}

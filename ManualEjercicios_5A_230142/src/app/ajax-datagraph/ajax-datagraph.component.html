@@ -1,0 +1,35 @@
+<!-- ajax-datagraph.component.html -->
+<div class="chart-container">
+    @if (loading) {
+      <div class="loading">
+        <p>Cargando datos de sesiones...</p>
+      </div>
+    }
+    
+    @if (!loading && !sessions.length) {
+      <div class="no-data">
+        <p>No hay datos de sesiones disponibles</p>
+      </div>
+    }
+  
+    @if (!loading && sessions.length) {
+      <div class="chart-wrapper">
+        <canvas #sessionChart width="800" height="400"></canvas>
+      </div>
+      
+      <div class="stats-grid">
+        <div class="stat-card">
+          <h3>Total Sesiones</h3>
+          <p>{{sessions.length}}</p>
+        </div>
+        <div class="stat-card">
+          <h3>Duración Promedio</h3>
+          <p>{{getAverageDuration()}} min</p>
+        </div>
+        <div class="stat-card">
+          <h3>Inactividad Promedio</h3>
+          <p>{{getAverageInactivity()}} min</p>
+        </div>
+      </div>
+    }
+  </div>

@@ -1,0 +1,11 @@
+<div class="container">
+    <div class="card">
+      <h2>Estado del Servidor</h2>
+      <div 
+        class="status" 
+        [style.color]="isServerRunning ? '#28a745' : '#e74c3c'">
+        {{ isServerRunning ? 'El servidor esta corriendo ⚡' : 'El servidor no esta corriendo ⚡' }}
+      </div>
+    </div>
+  </div>
+  

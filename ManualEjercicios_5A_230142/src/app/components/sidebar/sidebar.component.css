@@ -1,0 +1,41 @@
+.sidebar-content {
+
+    height: 100%;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #4ade80 #1e293b;
+}
+
+.sidebar-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.sidebar-content::-webkit-scrollbar-track {
+    background: #1e293b;
+}
+
+.sidebar-content::-webkit-scrollbar-thumb {
+    background-color: #4ade80;
+    border-radius: 6px;
+}
+
+.icon {
+    transition: transform 0.3s ease;
+}
+
+.hover\:border-green-400:hover {
+    border-color: #4ade80;
+}
+
+.hover\:scale-110:hover {
+    transform: scale(1.1);
+}
+
+.transition-all {
+    transition: all 0.3s ease;
+}
+
+/* Efecto de brillo al pasar el mouse */
+.hover\:glow:hover {
+    box-shadow: 0 0 15px rgba(74, 222, 128, 0.3);
+}

@@ -1,0 +1,29 @@
+<div class="sidebar-content bg-gray-900 p-6 rounded-r-2xl shadow-xl text-gray-100 space-y-6 h-full" *ngIf="ejercicioActual">
+    <div class="sticky top-0 pt-4 pb-6 bg-gray-900">
+        <h2 class="text-2xl font-bold text-green-400 text-center mb-2">{{ ejercicioActual?.titulo }}</h2>
+        <div class="h-1 bg-gradient-to-r from-green-400 to-green-600 rounded-full"></div>
+    </div>
+
+    <div class="p-4 bg-gray-800 rounded-lg shadow-lg border border-gray-700 transition-all hover:border-green-400">
+        <p class="text-green-400 text-lg font-semibold flex items-center gap-2 mb-2">
+            <span class="icon">🎯</span>
+            <span>Objetivo</span>
+        </p>
+        <p class="text-gray-300 text-base leading-relaxed">{{ ejercicioActual?.objetivo }}</p>
+    </div>
+
+    <div class="p-4 bg-gray-800 rounded-lg shadow-lg border border-gray-700 transition-all hover:border-green-400">
+        <p class="text-green-400 text-lg font-semibold flex items-center gap-2 mb-2">
+            <span class="icon">📖</span>
+            <span>Descripción</span>
+        </p>
+        <p class="text-gray-300 text-base leading-relaxed">{{ ejercicioActual?.descripcion }}</p>
+    </div>
+</div>
+
+<div class="p-6 bg-gray-800 rounded-r-2xl text-center text-gray-300 shadow-lg border border-gray-700 h-full flex items-center justify-center" *ngIf="!ejercicioActual">
+    <div>
+        <p class="text-lg mb-3">⚠️ No se ha seleccionado ningún elemento.</p>
+        <p class="text-sm text-gray-400">Selecciona un ejercicio para ver los detalles</p>
+    </div>
+</div>

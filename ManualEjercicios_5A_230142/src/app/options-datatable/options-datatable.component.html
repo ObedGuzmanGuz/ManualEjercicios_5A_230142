@@ -1,0 +1,36 @@
+<div class="page-content-container">
+  <div class="content">
+    <div class="table-responsive">
+      <table datatable [dtOptions]="dtOptions" class="display table table-bordered table-striped" width="100%">
+        <thead>
+          <tr>
+            <th>DR_NO<br /><small>No</small></th>
+            <th>Date Rptd<br /><small>Date</small></th>
+            <th>DATE OCC<br /><small>Date</small></th>
+            <th>TIME OCC<br /><small>Time</small></th>
+            <th>AREA<br /><small>Area</small></th>
+            <th>AREA NAME<br /><small>Name</small></th>
+            <th>Rpt Dist No<br /><small>No</small></th>
+            <th>Part 1-2<br /><small>Part</small></th>
+            <th>Crm Cd<br /><small>CRM</small></th>
+            <th>Crm Cd Desc<br /><small>Desc</small></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of crimes">
+            <td>{{ item.dr_no }}</td>
+            <td>{{ item.dateRptd }}</td>
+            <td>{{ item.dateOcc }}</td>
+            <td>{{ item.timeOcc }}</td>
+            <td>{{ item.area }}</td>
+            <td>{{ item.areaName }}</td>
+            <td>{{ item.rptDistNo }}</td>
+            <td>{{ item.part12 }}</td>
+            <td>{{ item.crmCd }}</td>
+            <td>{{ item.crmCdDesc }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
